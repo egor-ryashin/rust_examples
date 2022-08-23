@@ -32,7 +32,6 @@ fn example() -> Result<(), Box<dyn Error>> {
             r.add_cell(Cell::new(v));
         }
         table.add_row(r);
-        //println!("{:?}", record.get(0).unwrap());
     }
     println!("{table}");
     Ok(())
@@ -40,23 +39,4 @@ fn example() -> Result<(), Box<dyn Error>> {
 
 fn main() {
     example();
-}
-
-
-fn main0() {
-    let mut table = Table::new();
-    table
-        .set_header(vec!["Header1", "Header2", "Header3"])
-        .add_row(vec![
-                 "This is a text",
-                 "This is another text",
-                 "This is the third text",
-        ])
-        .add_row(vec![
-                 "This is another text",
-                 "Now\nadd some\nmulti line stuff",
-                 "This is awesome",
-        ]);
-
-    println!("{table}");
 }
